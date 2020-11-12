@@ -1,0 +1,13 @@
+name: Test Script
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - 'master'
+jobs:
+  check:
+    name: check test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: echo "Hello World"
