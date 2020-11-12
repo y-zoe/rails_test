@@ -9,5 +9,5 @@ jobs:
     name: check test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: check test
         run: echo "Hello World"
