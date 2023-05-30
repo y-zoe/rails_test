@@ -5,12 +5,15 @@ on:
     branches:
       - github-actions/test
 
+concurrency: dependabot-auto-merge
+
 permissions:
   pull-requests: write
   contents: write
 
 jobs:
   dependabot:
+    needs: check
     runs-on: ubuntu-latest
     # if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
