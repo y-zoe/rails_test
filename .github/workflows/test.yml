@@ -4,6 +4,7 @@ on:
     types: [opened, synchronize]
     branches:
       - 'master'
+      - 'github-actions/test'
 jobs:
   check:
     name: check test
