@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check test
-        run: echo "Hello World"
+        run: sleep 60 && echo "Hello World"
