@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check test
-        run: sleep 10 && echo "Completed!!"
+        run: sleep 10 && echo "Completed!!" && exit 1
