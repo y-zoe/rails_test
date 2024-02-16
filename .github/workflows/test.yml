@@ -5,10 +5,13 @@ on:
       - created
   workflow_dispatch:
   push:
+  pull_request:
+    types:
+      - labeled
 jobs:
   check:
     name: check test
-    if: (github.event_name != 'IssueCommentEvent') || github.event.comment.body == '!github call rspec'
+    if: (github.event.action != 'labeled') || github.event.label.name == 'call-rspec'
     runs-on: ubuntu-latest
     steps:
       - name: check test
