@@ -8,7 +8,7 @@ on:
 jobs:
   check:
     name: check test
-    if: (github.event.type != 'IssueCommentEvent') || github.event.comment.body == '!github call rspec'
+    if: (github.event_name != 'IssueCommentEvent') || github.event.comment.body == '!github call rspec'
     runs-on: ubuntu-latest
     steps:
       - name: check test
